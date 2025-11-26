@@ -1,0 +1,139 @@
+/* -----------------------------
+   Eilik THEME – Cute + Playful
+------------------------------*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+/* Background */
+body {
+  background: #FDFBF4;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Cute Eilik Robot Emoji */
+.eilik-header {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Sections */
+.section {
+  margin: 25px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Input */
+.input {
+  padding: 12px;
+  flex: 1;
+  border-radius: 12px;
+  border: 2px solid #30C7D5;
+  background: #F8FFFF;
+  transition: 0.3s;
+}
+
+.input:focus {
+  border-color: #F7D54A;
+  outline: none;
+}
+
+/* Button */
+.btn {
+  padding: 12px 20px;
+  background: #F7D54A;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.btn:hover {
+  background: #FFD84D;
+  transform: scale(1.05);
+}
+
+.btn.primary {
+  background: #30C7D5;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #28b7c3;
+}
+
+/* Cute floating animation */
+@keyframes pop {
+  0% { transform: scale(0.94); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Video Cards */
+.card {
+  display: flex;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+  animation: pop 0.3s ease;
+}
+
+.thumb {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Card content */
+.card-content h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-content p {
+  margin-top: 6px;
+  color: #666;
+  line-height: 1.3rem;
+}
+
+/* Pre output */
+.pre {
+  background: #FFF8C5;
+  padding: 18px;
+  border-radius: 12px;
+  color: #444;
+  font-size: 0.9rem;
+}

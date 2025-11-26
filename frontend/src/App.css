@@ -1,0 +1,258 @@
+/* -----------------------------
+   EILIK HOLOGRAPHIC GLASS THEME
+   Ultra Transparent + Soft Glow
+------------------------------*/
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+/* -----------------------------------
+   PAGE LAYOUT (FIXED)
+------------------------------------- */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: block;      /* IMPORTANT: prevents forced centering */
+  overflow-x: hidden;
+}
+
+/* -----------------------------------
+   BACKGROUND IMAGE + LIGHT OVERLAY
+------------------------------------- */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+
+  background: url("https://ankicozmorobot.com/wp-content/uploads/2022/12/Eilik-lifestyle-4-scaled.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+
+  position: relative;
+}
+
+/* Light overlay so text stays readable */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);  
+  z-index: -1;
+}
+
+/* -----------------------------------
+   MAIN CONTAINER – Positioned Normally
+------------------------------------- */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 35px;
+
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(18px);
+
+  border-radius: 24px;
+
+  /* VERY SOFT glow */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.10),
+    0 0 8px rgba(48, 199, 213, 0.08);
+}
+
+
+/* -----------------------------------
+   TITLE + ROBOT EMOJI
+------------------------------------- */
+
+.title {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.eilik-header {
+  text-align: center;
+  font-size: 4.4rem;
+  margin-bottom: 18px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* -----------------------------------
+   SECTIONS – Glass Panels
+------------------------------------- */
+
+.section {
+  margin: 30px 0;
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.12),
+    0 0 25px rgba(48, 199, 213, 0.12);
+
+  color: #fff;
+}
+
+h3 {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* -----------------------------------
+   INPUT – Holographic
+------------------------------------- */
+
+.input {
+  padding: 12px;
+  flex: 1;
+
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+
+  color: #fff;
+  transition: 0.3s;
+}
+
+.input::placeholder {
+  color: #e3e3e3;
+}
+
+.input:focus {
+  border-color: #30C7D5;
+  box-shadow: 0 0 10px rgba(48,199,213,0.5);
+  outline: none;
+}
+
+/* -----------------------------------
+   BUTTONS – Soft Glow
+------------------------------------- */
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.28);
+
+  box-shadow: 0 0 8px rgba(255,255,255,0.12);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.32);
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.20),
+    0 0 15px rgba(48,199,213,0.12);
+}
+
+.btn.primary {
+  background: rgba(48, 199, 213, 0.55);
+}
+
+.btn.primary:hover {
+  background: rgba(48, 199, 213, 0.70);
+  box-shadow:
+    0 0 10px rgba(48,199,213,0.22),
+    0 0 15px rgba(255,255,255,0.12);
+}
+
+/* -----------------------------------
+   VIDEO CARDS – Ultra Transparent
+------------------------------------- */
+
+.card {
+  display: flex;
+  gap: 16px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+
+  padding: 16px;
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.10),
+    0 0 20px rgba(48,199,213,0.12);
+
+  margin-bottom: 20px;
+  animation: pop 0.3s ease;
+}
+
+.thumb {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.card-content h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.card-content p {
+  margin-top: 6px;
+  color: #eaeaea;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* Pop animation */
+@keyframes pop {
+  0% { transform: scale(0.92); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* -----------------------------------
+   RAW JSON OUTPUT (fallback)
+------------------------------------- */
+
+.pre {
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(14px);
+
+  padding: 18px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.12),
+    0 0 25px rgba(48,199,213,0.12);
+
+  color: #fff;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
