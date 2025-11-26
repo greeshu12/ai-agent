@@ -24,7 +24,7 @@ function App() {
       <h1 className="title">My YouTube Agent</h1>
 
       {/* Login */}
-      <a href="http://localhost:3000/auth/login">
+      <a href={`${import.meta.env.VITE_API_BASE_URL}/auth/login`}>
         <button className="btn primary">Login with YouTube</button>
       </a>
 
